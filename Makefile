@@ -1,8 +1,8 @@
-CC = 						gcc
+CC =						gcc
 CFLAG = 					
-NAME = 						
-OBJECTS =  				    $(shell find objects/ -type f)
-SOURCES = 					$(shell find ./*.c -type f)
+NAME =						
+OBJECTS =					$(shell find objects/ -type f)
+SOURCES =					$(shell find source/ -type f)
 
 all: COMPILE
 
@@ -15,7 +15,7 @@ fclean: clean
 re: fclean all
 
 OBJECTS_MAKE:
-	gcc -c $(SOURCES) $(CFLAG) && mv $(addsuffix .o, $(basename $(notdir $(SOURCES)))) objects/
+	gcc -c $(SOURCES) $(CFLAG) -I./includes/
 
-COMPILE:
-	gcc *.c -lft -L./libs -I./includes
+COMPILE: OBJECTS_MAKE
+	gcc *.o -lft -L./libs

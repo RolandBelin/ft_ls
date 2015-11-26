@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_error.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbelin <rbelin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/24 18:09:11 by rbelin            #+#    #+#             */
-/*   Updated: 2015/11/26 03:29:48 by rbelin           ###   ########.fr       */
+/*   Created: 2015/11/25 22:36:18 by rbelin            #+#    #+#             */
+/*   Updated: 2015/11/26 01:54:53 by rbelin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include <ft_ls.h>
 
-INT32		ft_strcmp(const INT8 *s1, const INT8 *s2)
+void		ft_error(const char *data)
 {
-	size_t	n;
+	char	*temp;
 
-	n = 0;
-	while (s1[n] && s2[n] && s1[n] == s2[n])
-		++n;
-	return ((UINT8)s1[n] - (UINT8)s2[n]);
+	temp = NULL;
+	temp = ft_strnew(ft_strlen(data) + 4);
+	temp = ft_strcpy(temp, "ls: ");
+	temp = ft_strcat(temp, data);
+	perror(temp);
+	ft_strdel(&temp);
 }

@@ -1,23 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbelin <rbelin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/24 18:09:11 by rbelin            #+#    #+#             */
-/*   Updated: 2015/11/26 03:29:48 by rbelin           ###   ########.fr       */
+/*   Created: 2015/11/25 03:10:14 by rbelin            #+#    #+#             */
+/*   Updated: 2015/11/26 11:32:45 by rbelin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include <ft_ls.h>
 
-INT32		ft_strcmp(const INT8 *s1, const INT8 *s2)
+void		pll(t_linkedlist *ll)
 {
-	size_t	n;
+	UINT32	i;
 
-	n = 0;
-	while (s1[n] && s2[n] && s1[n] == s2[n])
-		++n;
-	return ((UINT8)s1[n] - (UINT8)s2[n]);
+	i = 0;
+	while (ft_linkedlist_containindex(ll, i))
+	{
+		printf("%s\n", (INT8 *)ft_linkedlist_getat(ll, i));
+		++i;
+	}
+}	
+
+INT32		main(INT32 ac, INT8 **av)
+{
+	t_linkedlist	*ll;
+	
+	ll = ft_linkedlist_new();
+	ft_linkedlist_addlast(ll, "a");
+	
+	ft_linkedlist_swap(&ll);
+	pll(ll);
+	return (0);
 }

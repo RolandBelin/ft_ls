@@ -6,7 +6,7 @@
 /*   By: rbelin <rbelin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 21:42:35 by rbelin            #+#    #+#             */
-/*   Updated: 2015/11/25 01:12:49 by rbelin           ###   ########.fr       */
+/*   Updated: 2015/11/26 11:06:08 by rbelin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ INT8					*ft_strcpy(INT8 *dst, const INT8 *src);
 INT8					*ft_strncpy(INT8 *dst, const INT8 *src, size_t n);
 INT8					*ft_strdup(const INT8 *s);
 INT8					*ft_strclr(INT8 *s);
-size_t					ft_strcmp(const INT8 *s1, const INT8 *s2);
+INT32					ft_strcmp(const INT8 *s1, const INT8 *s2);
 size_t					ft_strncmp(const INT8 *s1, const INT8 *s2, size_t i);
 INT8					*ft_strchr(const INT8 *s, INT32 c);
 INT8					*ft_strrchr(const INT8 *s, INT32 c);

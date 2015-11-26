@@ -6,16 +6,14 @@
 /*   By: rbelin <rbelin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/25 03:10:14 by rbelin            #+#    #+#             */
-/*   Updated: 2015/11/25 04:57:29 by rbelin           ###   ########.fr       */
+/*   Updated: 2015/11/26 00:17:56 by rbelin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ft_ls.h>
 
-int 		main(void)
+INT32		main(INT32 ac, INT8 **av)
 {
-	t_pms 	*pms;
-
-	pms = pms_init();
+	
 	return (0);
 }
