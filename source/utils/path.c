@@ -6,7 +6,7 @@
 /*   By: rbelin <rbelin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/25 21:11:26 by rbelin            #+#    #+#             */
-/*   Updated: 2015/11/26 01:46:23 by rbelin           ###   ########.fr       */
+/*   Updated: 2015/11/28 17:56:17 by rbelin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,10 +57,8 @@ char		*pathfile(const INT8 *path, const INT8 *file)
 
 	path_len = ft_strlen(path);
 	file_len = ft_strlen(file);
-	ret = NULL;
 	ret = ft_strnew(path_len + file_len + 1);
 	ret = ft_strcpy(ret, path);
-	ret = ft_strcpy(ret, "/");
-	ret = ft_strcpy(ret, file);
+	ret = ft_strcat(ret, file);
 	return (ret);
 }
